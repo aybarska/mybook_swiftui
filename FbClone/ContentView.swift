@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @Binding var text: String
     
-    let stories = ["story1", "story2", "story3","story1", "story2", "story3"]
+    let stories = ["story1", "story2", "story3","story4", "story5", "story6"]
     
     let newPurple = UIColor(red: 23/255.0,
                             green: 120/255.0,
@@ -55,15 +55,13 @@ struct ContentView: View {
                                     .background(Color.gray)
                                     .clipped()
                                 }
-                                
-                                
                             } .padding()
                             } //scroll hikayeler
-                        FBPost(name: "Ayberk Mogol", post: "Facebook ui clone calismasi. :)", imageName: "person1")
+                        FBPost(name: "Ayberk Mogol", post: "Facebook ui clone calismasi. :)", imageName: "person1", minute: "7")
                         
-                        FBPost(name: "Hamza Tester", post: "Lorem ipsum selam bir sonraki clone instagram olsun", imageName: "person3")
+                        FBPost(name: "Hamza Tester", post: "Lorem ipsum selam bir sonraki clone instagram olsun", imageName: "person3", minute: "12")
                         
-                        FBPost(name: "Test Kullanici", post: "Test post fonksiyon :)", imageName: "person2")
+                        FBPost(name: "Test Kullanici", post: "Test post fonksiyon :)", imageName: "person2", minute: "20")
                         
                         
                         Spacer()
@@ -82,7 +80,8 @@ struct FBPost: View { // gonderi kismi
     let name: String
     let post: String
     let imageName: String
-    
+    let minute: String
+    @State var isLiked: Bool = false
     
     var body: some View {
         VStack {
@@ -100,7 +99,7 @@ struct FBPost: View { // gonderi kismi
                         Spacer()
                     }
                     HStack {
-                        Text("14 Dakika once" ).foregroundColor(Color(.secondaryLabel))
+                        Text(minute ).foregroundColor(Color(.secondaryLabel))
                         Spacer()
                     }
                 }
@@ -115,9 +114,9 @@ struct FBPost: View { // gonderi kismi
             Spacer()
             HStack { // begeni yorumlar paylas kismi
                 Button(action: {
-                     
+                    isLiked.toggle()
                 },label: {
-                    Text("Begen")
+                    Text(isLiked ? "Liked" : "Like")
                 })
                 Spacer()
                 Button(action: {
