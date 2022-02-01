@@ -99,7 +99,7 @@ struct FBPost: View { // gonderi kismi
                         Spacer()
                     }
                     HStack {
-                        Text(minute ).foregroundColor(Color(.secondaryLabel))
+                        Text(minute + " Dakika önce.").foregroundColor(Color(.secondaryLabel))
                         Spacer()
                     }
                 }
