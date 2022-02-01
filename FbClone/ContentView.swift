@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct ContentView: View {
     
     @Binding var text: String
@@ -61,11 +59,13 @@ struct ContentView: View {
                                 
                             } .padding()
                             } //scroll hikayeler
-                        FBPost(name: "Ayberk Mogol", post: "Facebook ui clone calismasi. asdasd orosp cocuiklari :)", imageName: "person1")
+                        FBPost(name: "Ayberk Mogol", post: "Facebook ui clone calismasi. :)", imageName: "person1")
+                        
+                        FBPost(name: "Hamza Tester", post: "Lorem ipsum selam bir sonraki clone instagram olsun", imageName: "person3")
                         
                         FBPost(name: "Test Kullanici", post: "Test post fonksiyon :)", imageName: "person2")
                         
-                        FBPost(name: "Hamza Tester", post: "Lorem ipsum selam bir sonraki clone instagram olsun", imageName: "person3")
+                        
                         Spacer()
                         
                         }
