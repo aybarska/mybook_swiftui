@@ -13,7 +13,7 @@ struct ContentView: View {
     
     let stories = ["story1", "story2", "story3","story4", "story5", "story6"]
     
-    let newPurple = UIColor(red: 23/255.0,
+    let fbBlue = UIColor(red: 23/255.0,
                             green: 120/255.0,
                             blue: 242/255.0,
                             alpha: 1)
@@ -24,7 +24,7 @@ struct ContentView: View {
             HStack {
                 
             Text("testify").font(.system(size: 48, weight: .bold, design: .default))
-                .foregroundColor(Color(newPurple))
+                .foregroundColor(Color(fbBlue))
                 
             Spacer()
                 
