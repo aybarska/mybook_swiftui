@@ -21,25 +21,12 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                
-            Text("testify").font(.system(size: 48, weight: .bold, design: .default))
-                .foregroundColor(Color(fbBlue))
-                
-            Spacer()
-                
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .frame(width: 40, height: 40, alignment: .center)
-                    .foregroundColor(Color(.secondaryLabel))
-                
-            }.padding() // end Hstack
             
-            TextField("Arama...",text: $text)
-                .padding(7)
-                .background(Color(.systemGray5))
-                .cornerRadius(13)
-                .padding(.horizontal, 15)
+            logoView()
+                .padding()
+            
+            TextfieldView(text: .constant(""))
+                .padding()
                 
             ZStack{
                 Color(.secondarySystemBackground)
