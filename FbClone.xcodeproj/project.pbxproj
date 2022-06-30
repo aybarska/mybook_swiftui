@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		554D1BB22855DCFC00008559 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D1BB12855DCFC00008559 /* SearchBarView.swift */; };
 		554D1BB42855DD4700008559 /* logoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D1BB32855DD4700008559 /* logoView.swift */; };
 		554D1BB62855DF5400008559 /* TextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D1BB52855DF5400008559 /* TextfieldView.swift */; };
 		9817A27F27A6AFF40013D882 /* FbCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9817A27E27A6AFF40013D882 /* FbCloneApp.swift */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		554D1BB12855DCFC00008559 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		554D1BB32855DD4700008559 /* logoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoView.swift; sourceTree = "<group>"; };
 		554D1BB52855DF5400008559 /* TextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldView.swift; sourceTree = "<group>"; };
 		9817A27B27A6AFF40013D882 /* mybook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mybook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +59,6 @@
 				9817A28027A6AFF40013D882 /* ContentView.swift */,
 				554D1BB52855DF5400008559 /* TextfieldView.swift */,
 				554D1BB32855DD4700008559 /* logoView.swift */,
-				554D1BB12855DCFC00008559 /* SearchBarView.swift */,
 				9817A28227A6AFF50013D882 /* Assets.xcassets */,
 				9817A28427A6AFF50013D882 /* Preview Content */,
 			);
@@ -148,7 +145,6 @@
 			files = (
 				9817A28127A6AFF40013D882 /* ContentView.swift in Sources */,
 				554D1BB42855DD4700008559 /* logoView.swift in Sources */,
-				554D1BB22855DCFC00008559 /* SearchBarView.swift in Sources */,
 				554D1BB62855DF5400008559 /* TextfieldView.swift in Sources */,
 				9817A27F27A6AFF40013D882 /* FbCloneApp.swift in Sources */,
 			);

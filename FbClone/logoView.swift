@@ -13,6 +13,7 @@ struct logoView: View {
                          green: 120/255.0,
                          blue: 242/255.0,
                          alpha: 1)
+    // color custom
     
     var body: some View {
         HStack{
@@ -21,7 +22,7 @@ struct logoView: View {
             
             Text("Colli Book").font(.system(size: 43, weight: .bold, design: .default))
                 .foregroundColor(Color(fbBlue))
-                .frame(width: 250, height: 50, alignment: .topLeading)
+                .frame(width: 300, height: 50, alignment: .leading)
             
             Spacer()
             

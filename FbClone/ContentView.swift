@@ -14,9 +14,9 @@ struct ContentView: View {
     let stories = ["story1", "story2", "story3","story4", "story5", "story6"]
     
     let fbBlue = UIColor(red: 23/255.0,
-                            green: 120/255.0,
-                            blue: 242/255.0,
-                            alpha: 1)
+                         green: 120/255.0,
+                         blue: 242/255.0,
+                         alpha: 1)
     
     
     var body: some View {
@@ -26,8 +26,7 @@ struct ContentView: View {
                 .padding()
             
             TextfieldView(text: .constant(""))
-                .padding()
-                
+            
             ZStack{
                 Color(.secondarySystemBackground)
                 ScrollView(.vertical) {
@@ -35,35 +34,35 @@ struct ContentView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 3) {
                                 ForEach(stories, id: \.self) {name in
-                                Image(name)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill )
-                                    .frame(width: 140, height: 200, alignment: .center)
-                                    .background(Color.gray)
-                                    .clipped()
+                                    Image(name)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill )
+                                        .frame(width: 140, height: 200, alignment: .center)
+                                        .background(Color.gray)
+                                        .clipped()
                                 }
                             } .padding()
-                            } //scroll hikayeler
-                        FBPost(name: "Ayberk Mogol", post: "Facebook ui clone calismasi. :)", imageName: "person1", minute: "7")
+                        }
+                        FBPost(name: "BrocColli", post: "나는 목요일 밤이 제일 좋아 :)", imageName: "person1", minute: "7")
                         
-                        FBPost(name: "Hamza Tester", post: "Lorem ipsum selam bir sonraki clone instagram olsun", imageName: "person3", minute: "12")
+                        FBPost(name: "Border Collie", post: "물고기는 소중해 🐠", imageName: "person3", minute: "12")
                         
-                        FBPost(name: "Test Kullanici", post: "Test post fonksiyon :)", imageName: "person2", minute: "20")
+                        FBPost(name: "just Colli", post: "내일 대전 가야지 ^0^~", imageName: "person2", minute: "20")
                         
                         
                         Spacer()
                         
-                        }
                     }
                 }
+            }
             Spacer()
-            } // end Vstack
-            
-        }
-    }
+        } // end Vstack
         
-struct FBPost: View { // gonderi kismi
-     
+    }
+}
+
+struct FBPost: View {
+    
     let name: String
     let post: String
     let imageName: String
@@ -72,7 +71,7 @@ struct FBPost: View { // gonderi kismi
     
     var body: some View {
         VStack {
-            HStack { //pp ve isim
+            HStack {
                 Image(imageName)
                     .resizable()
                     .frame(width: 50, height: 50, alignment: .center)
@@ -86,42 +85,44 @@ struct FBPost: View { // gonderi kismi
                         Spacer()
                     }
                     HStack {
-                        Text(minute + " Dakika önce.").foregroundColor(Color(.secondaryLabel))
+                        Text(minute + " Minute ago").foregroundColor(Color(.secondaryLabel))
                         Spacer()
                     }
                 }
                 Spacer()
             }
             Spacer()
-            HStack { // icerik
+            HStack {
                 Text(post).font(.system(size: 24, weight: .regular, design: .default))
                     .multilineTextAlignment(.leading)
                 Spacer()
             }
             Spacer()
-            HStack { // begeni yorumlar paylas kismi
+            HStack {
                 Button(action: {
                     isLiked.toggle()
                 },label: {
-                    Text(isLiked ? "Liked" : "Like")
+                    Image(systemName: isLiked ? "heart.fill" : "heart")
+                        .font(.title)
                 })
                 Spacer()
                 Button(action: {
                     
                 },label: {
-                    Text("Yorum yap")
+                    Image(systemName:"text.bubble")
+                        .font(.title)
                 })
                 Spacer()
                 Button(action: {
                     
                 },label: {
-                    Text("Paylas")
+                    Image(systemName:"square.and.arrow.up")
+                        .font(.title)
                 })
-            }.padding()
+            }.padding(.vertical)
         }.padding()
             .background(Color(.systemBackground))
             .cornerRadius(7)
-          
     }
 }
 
@@ -131,4 +132,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(text: .constant(""))
     }
 }
- 
+
